@@ -1,3 +1,26 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "semi": ["error", "always"],
+    "quotes": ["error", "single"],
+    "no-console": "error",
+    "comma-dangle": "error",
+    "no-trailing-spaces": "error",
+    "eqeqeq": "error",
+    "eol-last": "error",
+    "no-extra-semi": "error",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "ObjectExpression": 1,
+        "ImportDeclaration": 1
+      }
+    ],
+    "no-magic-numbers": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-unused-vars": "error",
+    "no-unused-expressions": "error"
+  }
 }
