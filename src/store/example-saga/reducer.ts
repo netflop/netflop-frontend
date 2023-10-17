@@ -1,38 +1,38 @@
 import { ActionTypes, type Action } from './action';
 
-export type ExampleState = {
+export type State = {
   loading: boolean;
   number: number | null;
 };
 
-const initialState: ExampleState = {
+const initialState: State = {
   loading: false,
   number: null
 };
 
 export const reducer = (
-  state: ExampleState = initialState,
+  state: State = initialState,
   action: Action
-): ExampleState => {
+): State => {
   switch (action.type) {
-    case ActionTypes.EXAMPLE_START:
+    case ActionTypes.START:
       return {
         ...state,
         number: action.payload.number
       };
-    case ActionTypes.EXAMPLE_START_ASYNC:
+    case ActionTypes.START_ASYNC:
       return {
         ...state,
         loading: true
       };
-    case ActionTypes.EXAMPLE_SUCCESS_ASYNC:
+    case ActionTypes.SUCCESS_ASYNC:
       return {
         ...state,
         loading: false,
         number: action.payload.number
       };
-    case ActionTypes.EXAMPLE_ERROR_ASYNC:
-    case ActionTypes.EXAMPLE_FINISH_ASYNC:
+    case ActionTypes.ERROR_ASYNC:
+    case ActionTypes.FINISH_ASYNC:
       return {
         ...state
       };

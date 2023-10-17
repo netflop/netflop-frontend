@@ -1,7 +1,7 @@
 import { put, takeEvery, takeLatest } from 'redux-saga/effects';
 import { actions, ActionTypes, type Action } from './action';
 
-export function* exampleStartAsync(action: Action) {
+export function* startAsync(action: Action) {
   try {
     const range = action.payload.range;
     const number = Math.floor(Math.random() * range);
@@ -9,16 +9,16 @@ export function* exampleStartAsync(action: Action) {
       number
     };
 
-    yield put(actions.exampleSuccessAsync(payload));
+    yield put(actions.successAsync(payload));
     return;
   } catch (error) {
-    yield put(actions.exampleErrorAsync());
+    yield put(actions.errorAsync());
   } finally {
-    yield put(actions.exampleFinishAsync());
+    yield put(actions.finishAsync());
   }
 }
 
-export function* exampleFinishAsync() {
+export function* finishAsync() {
   try {
     return;
   } catch (error) {
@@ -27,6 +27,6 @@ export function* exampleFinishAsync() {
 }
 
 export default function* authSaga() {
-  yield takeLatest(ActionTypes.EXAMPLE_START_ASYNC, exampleStartAsync);
-  yield takeEvery(ActionTypes.EXAMPLE_FINISH_ASYNC, exampleFinishAsync);
+  yield takeLatest(ActionTypes.START_ASYNC, startAsync);
+  yield takeEvery(ActionTypes.FINISH_ASYNC, finishAsync);
 }

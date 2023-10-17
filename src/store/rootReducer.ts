@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import { reducer as exampleReducer } from './example';
+import { reducer as exampleSagaReducer } from './example-saga';
+import { slice as exampleThunkSlice } from './example-thunk';
 
 const rootReducer = combineReducers({
-  example: exampleReducer.reducer
+  exampleSaga: exampleSagaReducer.reducer,
+  exampleThunk: exampleThunkSlice.reducer
 });
 
 export default rootReducer;
