@@ -1,3 +1,4 @@
+import { AppProvider } from '@/store/AppProvider';
 import StyledComponentsRegistry from '@/libs/Antd/AntdRegistry';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html lang='en'>
       <StyledComponentsRegistry>
         <body suppressHydrationWarning={true} className={inter.className}>
-          {children}
+          <AppProvider>{children}</AppProvider>
         </body>
       </StyledComponentsRegistry>
     </html>
