@@ -6,7 +6,7 @@ const initialState: State = {
   number: null
 };
 
-export const slice = createSlice({
+const slice = createSlice({
   name: 'EXAMPLE_THUNK',
   initialState,
   reducers: {
@@ -28,6 +28,9 @@ export const slice = createSlice({
       });
   }
 });
+
+export const reducer = slice.reducer;
+export const actions = slice.actions;
 
 export type State = {
   loading: boolean;

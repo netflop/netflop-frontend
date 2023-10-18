@@ -1,7 +1,7 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ReduxThunkAction } from '@/store';
 import { selectNumber } from './selector';
-import { slice } from './slice';
+import { actions } from './slice';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // thunks
 export const startIfOdd =
@@ -12,7 +12,7 @@ export const startIfOdd =
 
       if (isOdd(currentNumber)) {
         const number = Math.floor(Math.random() * payload.range);
-        dispatch(slice.actions.start({ number }));
+        dispatch(actions.start({ number }));
       }
     };
 
@@ -35,6 +35,7 @@ type StartAsyncPayload = {
 };
 
 /* eslint-disable*/
+// for example only, or we should do this way for utils
 const isOdd = (number: number | null) => {
   return number !== null && number % 2 === 1
 }
