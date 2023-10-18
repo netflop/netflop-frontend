@@ -21,7 +21,7 @@ sagaMiddleware.run(rootSaga);
 
 export default store;
 
-export type AppState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>;
 export type ReduxStore = typeof store;
 export type ReduxState = ReturnType<typeof store.getState>;
 export type ReduxDispatch = typeof store.dispatch;
