@@ -11,9 +11,9 @@ const LoginForm = () => {
   };
 
   return (
-    <div className='login-form-wrapper w-full h-screen pb-10 flex justify-center items-center'>
-      <div className='login-form w-[300px]'>
-        <div className='logo p-5 flex justify-center'>
+    <div className='login-form-wrapper w-full h-screen pb-10 flex justify-center items-center bg-[#e3e3e3]'>
+      <div className='login-form w-[400px] p-10 bg-[#f7f7f780] backdrop-blur-md shadow-md rounded-xl'>
+        <div className='logo p-5 flex justify-center items-end'>
           <Image
             src='/netflop.png'
             alt='NETFLOP Logo'
@@ -21,6 +21,7 @@ const LoginForm = () => {
             height={24}
             priority
           />
+          <span className='pb-3 text-xs'>admin</span>
         </div>
         <Form
           name='normal_login'
@@ -57,12 +58,14 @@ const LoginForm = () => {
             />
           </Form.Item>
           <Form.Item>
-            <Form.Item name='remember' valuePropName='checked' noStyle>
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item>
-            <a className='login-form-forgot' href=''>
-              Forgot password
-            </a>
+            <div className='flex justify-between'>
+              <Form.Item name='remember' valuePropName='checked' noStyle>
+                <Checkbox>Remember me</Checkbox>
+              </Form.Item>
+              <a className='login-form-forgot' href=''>
+                Forgot password
+              </a>
+            </div>
           </Form.Item>
           <Form.Item>
             <Button
