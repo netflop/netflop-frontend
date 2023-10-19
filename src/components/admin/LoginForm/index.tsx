@@ -17,7 +17,7 @@ const LoginForm = () => {
           <Image
             src='/netflop.png'
             alt='NETFLOP Logo'
-            width={100}
+            width={150}
             height={24}
             priority
           />
