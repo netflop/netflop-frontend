@@ -4,6 +4,7 @@
 
 :root {
   /* Nothing */
+  font-family: 'Avenir Next LT Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,4 +15,69 @@
 
 body {
   /* Global css of body tag */
+}
+
+/* Avenir Next LT Pro */
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-Cn.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-CnIt.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-MediumCn.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-MediumCnIt.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-DemiCn.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-DemiCnIt.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-BoldCn.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../assets/fonts/AvenirNextLTPro/AvenirNextLTPro-BoldCnIt.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
 }
