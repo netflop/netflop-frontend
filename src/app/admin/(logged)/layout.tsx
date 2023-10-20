@@ -92,9 +92,9 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </Header>
 
-      <Content className='px-[50px]'>
+      <Content className='px-[20px]'>
         <div
-          className='site-layout-content my-2 rounded'
+          className='site-layout-content rounded-xl mt-[20px] h-[calc(100vh-(69px+64px+20px))] p-5'
           style={{ background: colorBgContainer }}>
           {children}
         </div>
