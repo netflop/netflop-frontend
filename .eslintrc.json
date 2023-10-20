@@ -18,7 +18,7 @@
         "ImportDeclaration": 1
       }
     ],
-    "no-magic-numbers": "error",
+    "no-magic-numbers": "off",
     "jsx-quotes": ["error", "prefer-single"],
     "no-unused-vars": "error",
     "no-unused-expressions": "error"
