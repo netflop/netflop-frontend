@@ -7,10 +7,12 @@ import InputWrapper from '../InputWrapper';
 import Label from '../Label';
 import Button from '@/components/client/Button';
 import Input from '@/components/client/Input';
+import { EyeInvisibleOutlined, EyeOutlined } from '@ant-design/icons';
 
 const Form = (props: FormProps) => {
   const [isEmailInputFocused, setIsEmailInputFocused] = useState(false);
   const [isPasswordInputFocused, setIsPasswordInputFocused] = useState(false);
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   const initialValues: FormValues = {
     email: '',
@@ -49,6 +51,9 @@ const Form = (props: FormProps) => {
       setIsPasswordInputFocused(false);
     }
   };
+  const onShowPasswordToggle = () => {
+    setIsShowPassword(!isShowPassword);
+  };
 
   return (
     <form onSubmit={formik.handleSubmit} >
@@ -80,16 +85,27 @@ const Form = (props: FormProps) => {
         >
           <span>Password</span>
         </Label>
-        <div>
+        <div className='flex'>
           <Input
             id='password'
             name='password'
-            type='password'
+            type={isShowPassword ? 'text' : 'password'}
             onFocus={onPasswordFocus}
             onChange={formik.handleChange}
             onBlur={onPasswordBlur}
             value={formik.values.password}
           />
+          <button
+            className={tw([
+              'flex',
+              'items-center',
+              'm-2',
+              'ml-0'
+            ])}
+            onClick={onShowPasswordToggle}
+          >
+            {isShowPassword ? <EyeInvisibleOutlined /> : <EyeOutlined />}
+          </button>
         </div>
         <ErrorMessage>
           {formik.touched.password && formik.errors.password}
